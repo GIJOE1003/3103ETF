@@ -81,6 +81,7 @@ def forecast_ticker(df, ticker):
 
         results.append({
             'Ticker': ticker,
+            'ETF Name': ETF_Names.get(ticker, ticker),
             'Date': date,
             'Predicted_Close': predicted_close,
             'Predicted_Return': simulated_return,
