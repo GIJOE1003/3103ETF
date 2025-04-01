@@ -77,7 +77,7 @@ def forecast_ticker(df, ticker):
 
         total_returns = history['Return'].dropna().tolist()[-6:] + future_returns[-1:]
         predicted_volatility7 = np.std(total_returns) if len(total_returns) >= 2 else 0.0
-        signal = 1 if simulated_return > 0.002 else -1 if simulated_return < -0.002 else 0
+        signal = 1 if simulated_return > 0.02 else -1 if simulated_return < -0.02 else 0
 
         results.append({
             'Ticker': ticker,
