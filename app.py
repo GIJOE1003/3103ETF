@@ -54,7 +54,8 @@ st.dataframe(signals[["Date", "Signal_Text"]].rename(columns={"Signal_Text": "Si
 
 # --- Volatility Forecast ---
 st.subheader("🔄 Predicted Volatility (Next 7 Days)")
-st.dataframe(vols.rename(columns={"Predicted_Volatility": "Volatility"}), use_container_width=True)
+vols['Volatility (%)'] = (vols['Predicted_Volatility'] * 100).round(2).astype(str) + '%'
+st.dataframe(vols[['Date', 'Volatility (%)']], use_container_width=True)
 
 # --- Footer ---
 st.markdown("---")
