@@ -32,7 +32,7 @@ signals = pred_signals[pred_signals["Ticker"] == selected_ticker].copy()
 vols = pred_volatility[pred_volatility["Ticker"] == selected_ticker].copy()
 
 # --- Price Chart ---
-st.subheader(f"Price History & Forecast: {selected_ticker}")
+st.subheader(f"Price History & Forecast (Next 7 days): {selected_ticker}")
 if not hist.empty:
     hist_trimmed = hist.sort_values("Date").tail(60)[["Date", "Close"]].rename(columns={"Close": "Price"})
     pred_trimmed = pred[["Date", "Predicted_Price"]].rename(columns={"Predicted_Price": "Price"})
