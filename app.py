@@ -59,4 +59,4 @@ st.dataframe(vols[['Date', 'Volatility (%)']], use_container_width=True)
 
 # Footer
 st.markdown("---")
-st.subheader("Developed as part of Institute of Data Capstone Project | Forecasts are model-based and in Beta Stage.")
+st.subheader("Developed as part of Institute of Data Capstone Project | Forecasts are model-based | Beta testing - To be launched Soon")
